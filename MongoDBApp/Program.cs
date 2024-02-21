@@ -58,6 +58,14 @@ internal class Program
         await collection.InsertOneAsync(data);
     }
 
+    /// <summary>
+    /// This method is used to Insert Bulk documents
+    /// </summary>
+    /// <param name="data"></param>
+    /// <param name="connectionString"></param>
+    /// <param name="dbName"></param>
+    /// <param name="colName"></param>
+    /// <returns></returns>
     public static async Task InsertBulk(BsonDocument[] data, string connectionString, string dbName, string colName)
     {
         var client = new MongoClient(connectionString);
